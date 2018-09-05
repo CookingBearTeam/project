@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jdbc.demo.dao.demoDao">
+	
+	<select id="queryGoodsList" parameterType="java.lang.String" resultType="com.jdbc.demo.orm.demoBean">
+		select id, goods ,type from frog
+	</select>
+	
+	<select id="querytype1List" parameterType="java.lang.String" resultType="java.util.Map">
+		select id, goods ,type from frog where type='1'
+	</select>
+	
+	<select id="querytype2List" parameterType="java.lang.String" resultType="java.util.Map">
+		select id, goods ,type from frog where type='2'
+	</select>
+	
+	<select id="querytype3List" parameterType="java.lang.String" resultType="java.util.Map">
+		select id, goods ,type from frog where type='3'
+	</select>
+	
+	<select id="test1" parameterType="java.lang.String" resultType="com.jdbc.demo.orm.demoBean2">
+		select id, s_fff from dd
+	</select>
+	
+</mapper>

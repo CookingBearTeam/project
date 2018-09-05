@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/com/jdbc/util=UTF-8
+encoding//src/com/jdbc/util/DateUtil.java=UTF-8
+encoding//src/com/jdbc/util/JsonUtil.java=UTF-8
+encoding//src/com/jdbc/util/RedisUtil.java=UTF-8
+encoding//src/com/jdbc/util/StringUtil.java=UTF-8
+encoding//src/com/jdbc/util/URLConnectionHelper.java=UTF-8
+encoding/<project>=UTF-8

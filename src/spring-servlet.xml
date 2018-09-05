@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:mvc="http://www.springframework.org/schema/mvc"      
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+            http://www.springframework.org/schema/beans/spring-beans.xsd 
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd 
+            http://www.springframework.org/schema/mvc  
+            http://www.springframework.org/schema/mvc/spring-mvc.xsd"            
+    > 
+   
+	<mvc:annotation-driven>
+		 <mvc:message-converters register-defaults="true">
+            <!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 注解请求映射  默认是ISO-88859-1，避免乱码这里设置为UTF-8 -->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes" value="text/html;charset=UTF-8" />
+            </bean>
+            <!-- 启动JSON格式的配置,自动将格式转换成JSON格式，不需要其他类 -->
+            <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="supportedMediaTypes" value="application/json;charset=UTF-8" />
+            </bean>
+        </mvc:message-converters>
+	</mvc:annotation-driven>
+	<!-- 启动注解自动扫描 -->
+	<!-- 凡是被扫描到的类，自动在spring中实例化 -->
+	<!-- <context:component-scan base-package="com.zskj.www.test.**.controller"></context:component-scan> -->
+	<context:component-scan base-package="com.jdbc.*"/>
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+   		<property name="prefix" value="/WEB-INF/jsp/" />  <!--前缀  -->
+   		<property name="suffix" value=".jsp" />   <!--后缀  -->
+   		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/> 
+	</bean> 
+	<!-- 静态资源映射  告诉前端控制器将访问js下的所有目录的请求转到js文件夹下 -->
+	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
+    <!--json格式数据转换的配置  -->
+</beans>
