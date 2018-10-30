@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+            http://www.springframework.org/schema/beans/spring-beans.xsd"                      
+    > 
+    
+    <!-- 读取参数配置 -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+		<property name="locations">  
+			<list>  
+                 <value>classpath:dbconfig.properties</value>
+            </list>  
+        </property>  
+	</bean>
+	<bean class="com.alibaba.druid.pool.DruidDataSource" id="dataSource"><!-- DRUID是阿里巴巴开源平台上一个数据库连接池实现 -->
+		<property name="url" value="${url}" />  
+        <property name="username" value="${username}" />  
+        <property name="password" value="${password}" />  
+        <property name="driverClassName" value="${driverClassName}" /> <!--  这一项可配可不配，如果不配置druid会根据url自动识别dbType，然后选择相应的driverClassName(建议配置下)-->
+        <!-- 这里配置提交方式，默认就是TRUE，可以不用配置 -->
+        <property name="defaultAutoCommit" value="false" />
+        <property name="filters" value="log4j" />
+        <property name="maxActive" value="${maxActive}" /><!-- 最大连接数 -->
+	<!--  获取连接时最大等待时间，单位毫秒。配置了maxWait之后，缺省启用公平锁，并发效率会有所下降，如果需要可以通过配置useUnfairLock属性为true使用非公平锁。-->
+		<property name="maxWait" value="${maxWait}" />
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    	<property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+        <!-- mapper扫描 -->
+        <property name="mapperLocations" value="classpath:com/jdbc/**/orm/*.xml"></property>
+    </bean>
+    
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.jdbc" />  
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>  
+	</bean> 
+</beans>

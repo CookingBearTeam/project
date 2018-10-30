@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="cacheManager" ref="cacheManager"/>
+        <property name="authenticator" ref="authenticator"></property>
+        <property name="realms">
+        	<list>
+    			<ref bean="jdbcRealm"/>
+    		</list>
+        </property>
+        <property name="rememberMeManager.cookie.maxAge" value="10"></property>
+    </bean>
+
+    <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/> 
+    </bean>
+    
+    <bean id="authenticator" 
+    	class="org.apache.shiro.authc.pam.ModularRealmAuthenticator">
+    	<property name="authenticationStrategy">
+    		<bean class="org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy"></bean>
+    	</property>
+    </bean>
+
+    <bean id="jdbcRealm" class="com.jdbc.console.realms.ShiroRealm">
+    	<property name="credentialsMatcher">
+    		<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+    			<property name="hashAlgorithmName" value="MD5"></property>
+    			<property name="hashIterations" value="1024"></property>
+    		</bean>
+    	</property>
+    </bean>
+    
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+          depends-on="lifecycleBeanPostProcessor"/>
+          
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/index.jsp"/>
+        <property name="successUrl" value="/console/menu.jsp"/>
+        <!-- 用户访问未对其授权的资源时,所显示的连接 -->
+        <property name="unauthorizedUrl" value="/index.jsp"/>
+        <property name="filterChainDefinitionMap" ref="filterChainDefinitionMap"></property>
+    </bean>
+    
+    <bean id="filterChainDefinitionMap" 
+    	factory-bean="filterChainDefinitionMapBuilder" factory-method="buildFilterChainDefinitionMap"></bean>
+    
+    <bean id="filterChainDefinitionMapBuilder"
+    	class="com.jdbc.console.factory.FilterChainDefinitionMapBuilder"></bean>
+    
+    <bean id="UserService"
+    	class="com.jdbc.console.service.UserService"></bean>
+    	
+</beans>
