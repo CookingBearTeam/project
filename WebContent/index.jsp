@@ -3,67 +3,77 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <base href="<%=basePath%>">
-
-<title>My JSP</title>
+<title>用户登录</title>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
-<script type="text/javascript" src="<%=path%>/js/jquery/jquery-2.1.4.js"></script>
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/css/index.css">
+<script type="text/javascript" src="<%=path%>/static/js/jquery/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="<%=path%>/static/js/jquery/jquery.form.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	$('#click').click(function(){
-		var username=$('#username').val();
-		$.ajax({
-			url:'demo/test',
-			type:'post',
-			dateType:"json",
-			data:{"username":username},
-			success:function(data){
-				alert("success");
-				$('#divshow').html(data);
-			},
-			error:function(e){
-				alert("fail");
-				console.log(e);
-			}
-		});
-	})
 	
-	$('#frog').click(function(){
-		$.ajax({
-			url:'demo/frog',
-			type:'post',
-			dateType:"json",
-			success:function(data){
-				debugger;
-				var ss = data[0];
-				$('#divshow').html(ss.装备1);
-				console.log(ss);
-			},
-			error:function(e){
-				alert("fail");
-				console.log(e);
+	$(document).ready(function() {
+		//判断首页是否是顶级窗口，如果不是处理!
+		if (top.location != self.location) {
+			window.top.location.href = self.location.href;
+		}
+	});
+	
+	$("#loginForm").ajaxForm(function(data){
+		var username =  document.getElementById("username").value;
+	    var password =  document.getElementById("password").value;
+	    $(".error_info").css("display", "none");
+	    $(".error").css("display", "none");
+	    //非空验证
+		if(username==""||username==null||username==undefined) {
+			$(".error").css("display", "block");
+			$(".error").html("* 用户名不能为空!");
+		}else if(password==""||password==null||password==undefined){
+			$(".error").css("display", "block");
+			$(".error").html("* 密码不能为空!");
+		}else{
+			var code = data.code;
+			if(code == -1){
+				$(".error_info").css("display", "block");
+				$(".error_info").html(data.msg);
+			}else{
+				window.location.href="<%=path%>/console/menu.jsp";
 			}
-		});
-	})
+		}
+   	});
+	
 })
 </script>
+
 </head>
 <body>
-	<div  left:200px; top:200px;">
-		用户名：<input type="text" name="username" id="username">
-          	 <input type="button" id="click" value="点击">
+	<div class="background">
+		<div class="error_info" style="width:400px; height:50px; margin:10px auto;border-radius:15px;border:none; background-color:#DBD7D7;text-align:center;color:#bb0e0a;line-height:50px;position:relative;display:none">
+			<div id="error_invalid" style="background-image:url(<%=path%>/static/image/message_error_close.png); background-repeat:no-repeat; width:16px; height:16px;position:absolute;right:20px;top:18px;"></div>
+		</div>
+		<form action="<%=path%>/console/userLogin" method="post" id="loginForm" name="loginForm">
+			<div class="index-form">
+				<div class="index-title">后台管理系统</div>
+				<div style="width:100%;margin-top:20px;">
+	    			<input class="index_username" placeholder="用户名" id="username" name="username">
+	  			</div>
+	  			<div style="width:100%;margin-top:20px; position:relative;" >
+		   			<input class="index_password" type="password" placeholder="密码" id="password" name="password">
+	  			</div>
+	  			<div style="width:100%;margin-top:10px;color:red" class="error">
+	  			</div>
+	  			<div style="width:100%;margin-top:20px; position:relative;">
+		   			<input class="index_login" type="submit" value="登录">
+	  			</div>
+			</div>
+		</form>
 	</div>
-	<div style="margin:20px;">
-		<input type="button" id="frog" value="青蛙接口">
-	</div>
-	<div id="divshow"></div>
 </body>
 </html>

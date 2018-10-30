@@ -25,14 +25,14 @@
 	</mvc:annotation-driven>
 	<!-- 启动注解自动扫描 -->
 	<!-- 凡是被扫描到的类，自动在spring中实例化 -->
-	<!-- <context:component-scan base-package="com.zskj.www.test.**.controller"></context:component-scan> -->
-	<context:component-scan base-package="com.jdbc.*"/>
+	<context:component-scan base-package="com.jdbc"/>
+	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
    		<property name="prefix" value="/WEB-INF/jsp/" />  <!--前缀  -->
    		<property name="suffix" value=".jsp" />   <!--后缀  -->
    		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/> 
 	</bean> 
-	<!-- 静态资源映射  告诉前端控制器将访问js下的所有目录的请求转到js文件夹下 -->
-	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
-    <!--json格式数据转换的配置  -->
+	<!-- 静态资源映射  告诉前端控制器将访问js下的所有目录的请求转到static文件夹下 -->
+	<mvc:resources location="/static/" mapping="/static/**"></mvc:resources>
+	
 </beans>
