@@ -8,14 +8,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <base href="<%=basePath%>">
 <title>用户登录</title>
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="cache-control" content="no-cache">
-<meta http-equiv="expires" content="0">
-<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-<meta http-equiv="description" content="This is my page">
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/css/index.css">
-<script type="text/javascript" src="<%=path%>/static/js/jquery/jquery-2.1.4.js"></script>
-<script type="text/javascript" src="<%=path%>/static/js/jquery/jquery.form.js"></script>
+<link rel="stylesheet" type="text/css" href="<%=basePath%>/static/css/console/index.css">
+<script type="text/javascript" src="<%=basePath%>/static/js/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>/static/js/jquery/jquery.form.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	
@@ -25,7 +20,6 @@ $(document).ready(function(){
 			window.top.location.href = self.location.href;
 		}
 	});
-	
 	$("#loginForm").ajaxForm(function(data){
 		var username =  document.getElementById("username").value;
 	    var password =  document.getElementById("password").value;

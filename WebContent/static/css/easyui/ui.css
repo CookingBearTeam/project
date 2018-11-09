@@ -1,0 +1,438 @@
+@charset "utf-8";
+/* CSS Document */
+.menu-shadow{
+	background:none;
+	box-shadow:0px 0px 0px #cccccc;
+	filter:none;
+}
+.m-btn-downarrow, .s-btn-downarrow{
+	background:url('images/menu_arrows.png') no-repeat 0 center;
+}
+.menu-rightarrow {
+  background: url('images/menu_arrows.png') no-repeat -32px center;
+}
+/*Tree*/
+
+.tree-collapsed{
+    background:url('images/tree_icons.png') no-repeat 0px 0px
+}
+.tree-expanded{
+    background:url('images/tree_icons.png') no-repeat -18px 0px
+}
+.tree-icon,.tree-folder{
+    background:none;
+    width:0px;
+}
+.tree-file{
+}
+.tree-checkbox0{
+    background:url('images/tree_icons.png') no-repeat -208px -18px;
+}
+.tree-checkbox1{
+    background:url('images/tree_icons.png') no-repeat -224px -18px;
+}
+.tree-checkbox2{
+    background:url('images/tree_icons.png') no-repeat -240px -18px;
+}
+.tree-lines .tree-node-last .tree-expanded, .tree-lines .tree-root-one .tree-expanded{
+    background:url('images/tree_icons.png') no-repeat -80px 0;
+}
+.tree-lines .tree-collapsed, .tree-lines .tree-root-first .tree-collapsed{
+    background:url('images/tree_icons.png') no-repeat -128px 0;
+}
+.tree-join{
+     background:url('images/tree_icons.png') no-repeat -192px 0;
+}
+.tree-joinbottom{
+     background:url('images/tree_icons.png') no-repeat -160px 0;
+}
+.tree-lines .tree-expanded, .tree-lines .tree-root-first .tree-expanded{
+     background:url('images/tree_icons.png') no-repeat -144px 0;
+}
+.tree-line{
+     background:url('images/tree_icons.png') no-repeat -176px 0;
+}
+.tree-node-selected{
+	color:#000000;
+}
+.tree-editor{
+	height:18px !important;
+	
+}
+/*easyui-menubutton*/
+.easyui-menubutton{
+    background:none;
+}
+.easyui-menubutton:hover{
+    background:none;
+    border:none;
+    margin:0;
+}
+/*datagrid*/
+.datagrid .easyui-linkbutton{
+    color:#000000;
+    border:#b2b2b2 solid 1px;
+    background: -webkit-linear-gradient(top,#ffffff 0,#eeeeee 100%);
+    background: -moz-linear-gradient(top,#ffffff 0,#eeeeee 100%);
+    background: -o-linear-gradient(top,#ffffff 0,#eeeeee 100%);
+    background: linear-gradient(to bottom,#ffffff 0,#eeeeee 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#eeeeee,GradientType=0);
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+
+}
+.datagrid td{
+    padding:5px;
+}
+.datagrid .pagination-info{
+    padding-right:20px;
+    margin-top:5px;
+}
+.datagrid  .easyui-linkbutton:hover{
+    color:#ffffff;
+    background:#0361b0;
+    background: -webkit-linear-gradient(#1d7fd3, #146fcb); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#1d7fd3, #146fcb); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#1d7fd3, #146fcb); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#1d7fd3, #146fcb); /* 标准的语法 */
+    filter: none; 
+}
+.datagrid .panel-body{
+    border:#b1b2b2 solid 1px;
+}
+.datagrid-header td, .datagrid-body td, .datagrid-footer td{
+    
+}
+.datagrid-header td.datagrid-header-over {
+    background:#0361b0;
+    color:#ffffff;
+}
+.datagrid .panel-header{
+    margin-bottom:10px;
+    border:none;
+    border-bottom:#b1b2b2 solid 1px;
+    }
+.datagrid .panel-title{
+    padding-left:15px;
+    color:#000000;
+}
+.datagrid .panel-tool{
+    position:absolute;
+    left:0px;
+    top:12px;
+}
+
+.datagrid-view .datagrid-editable-input{
+	color:#000000;
+}
+.datagrid-row-editing .textbox-text{
+    color:#000000;
+}
+
+
+
+
+
+.pagination-first {
+  background: url('images/pagination_icons.png') no-repeat 0 center;
+}
+.pagination-prev {
+  background: url('images/pagination_icons.png') no-repeat -16px center;
+}
+.pagination-next {
+  background: url('images/pagination_icons.png') no-repeat -32px center;
+}
+.pagination-last {
+  background: url('images/pagination_icons.png') no-repeat -48px center;
+}
+.pagination-load {
+  background: url('images/pagination_icons.png') no-repeat -64px center;
+}
+.pagination-loading {
+  background: url('images/loading.gif') no-repeat center center;
+}
+.datagrid-toolbar{
+    
+}
+/*easyui-combobox*/
+.combo-arrow{
+    background:url('images/combo_arrow.png') no-repeat center center;
+}
+.combobox-item-selected{
+    background-color:#1774ce;
+}
+/*Tab*/
+.tabs li.tabs-selected a.tabs-inner{
+    color:#0361b0;
+}
+.tabs li a.tabs-inner{
+    
+}
+/*easyui-通用修改*/
+.l-btn-text{
+    line-height:20px;
+}
+/*easyui-calendar*/
+.calendar{
+    border-radius:10px;
+}
+.datebox .combo-arrow{
+    background-image:url('images/datebox_arrow.png');
+    opacity:1;
+}
+.calendar-today{
+    font-weight:bold;
+}
+.calendar-day{
+    border-radius:100px;
+    border:none;
+    color:#324d5c;
+}
+
+.calendar-selected{
+    border-radius:100px;
+    background:#0361b0;
+    color:#ffffff;
+    border:none;
+}
+.calendar-title{
+    background:#0361b0;
+    color:#ffffff;
+    border-radius:0px;
+}
+.calendar-saturday{
+    color:#1774ce;
+}
+.calendar-sunday{
+    color:#de4949;
+}
+.calendar-prevmonth{
+    background:url('images/calendar_arrows.png') no-repeat -18px -2px;
+}
+.calendar-prevyear{
+    background:url('images/calendar_arrows.png') no-repeat -1px -2px;
+}
+.calendar-nextmonth{
+    background:url('images/calendar_arrows.png') no-repeat -34px -2px;
+}
+.calendar-nextyear{
+    background:url('images/calendar_arrows.png') no-repeat -49px -2px;
+}
+
+.arrow{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 10px;
+    height: 20px;
+    background-image: url(/images/arrow.png);
+    background-repeat: no-repeat;
+    float: left;
+    margin-top: 5px;
+}
+._content_title {
+    font-size: 12px;
+    color: #000000;
+    padding-left: 20px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: #b3b3b5 solid 1px;
+}
+
+
+/*easyui-linkbutton*/
+.easyui-linkbutton{
+    border:#b2b2b2 solid 1px;
+    margin-top:-3px;
+}
+.easyui-linkbutton:hover{
+    color:#ffffff;
+    background:#0361b0;
+    background: -webkit-linear-gradient(#1d7fd3, #146fcb); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#1d7fd3, #146fcb); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#1d7fd3, #146fcb); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#1d7fd3, #146fcb); /* 标准的语法 */
+    filter: none; 
+}
+/*.accordion*/
+.accordion-collapse{
+    background:url('images/accordion_arrows_new.png') no-repeat 0 0;
+}
+.accordion-expand{
+    background:url('images/accordion_arrows_new.png') no-repeat -16px 0
+}
+.accordion .accordion-header-selected{
+    background-color:#f3f3f3;
+}
+.accordion .accordion-header-selected .panel-title{
+    color:#3085d8;
+}
+/*自定义panel*/
+.myTitlePanel{
+    border:none;
+    background:none;
+    filter:none;
+}
+.myTitlePanel .panel-title {
+    font-size:20px;
+    padding-top:20px;
+    padding-bottom:30px;
+    padding-left:10px;
+}
+.myPanel{
+    border:none;
+    background:none;
+    filter:none;
+    margin-left:10px;
+}
+.myPanel .panel-title {
+    background:none;
+    filter:none;
+    padding-left:10px;
+}
+.myPanel .panel-tool{
+    left:-5px;
+}
+.myPanel .panel-tool a{
+    float:left;
+    opacity:1;
+}
+.myPanel .panel-tool a:hover{
+    background-color:transparent;
+}
+.myPanel .panel-tool-collapse{
+    background:url('images/panel_tools.png') no-repeat -32px 0;
+}
+.myPanel .panel-tool-expand{
+    background:url('images/panel_tools.png') no-repeat -32px -16px;
+}
+.myBlankPanel{
+    background-image:url(images/blankBg.jpg);
+}
+.panel-tool a{
+    opacity:1;
+    
+}
+.panel-loading {
+  background: url('images/loading.gif') no-repeat 10px 10px;
+}
+.panel-tool-close {
+  background: url('images/panel_tools.png') no-repeat -16px 0px;
+}
+.panel-tool-min {
+  background: url('images/panel_tools.png') no-repeat 0px 0px;
+}
+.panel-tool-max {
+  background: url('images/panel_tools.png') no-repeat 0px -16px;
+}
+.panel-tool-restore {
+  background: url('images/panel_tools.png') no-repeat -16px -16px;
+}
+.panel-tool-collapse {
+  background: url('images/panel_tools.png') no-repeat -32px 0;
+}
+.panel-tool-expand {
+  background: url('images/panel_tools.png') no-repeat -32px -16px;
+}
+/*中部Tab菜单*/
+.tabs .tabs li a.tabs-inner{
+    border:none;
+    background:none;
+    filter:none;
+}
+.tabs .tabs-header .tabs-pill li.tabs-selected a.tabs-inner{
+    background:none;
+    filter:none;
+    border-bottom:#0361b0 solid 1px;
+    border-radius:0px;
+    color:#0361b0;
+}
+/*左侧菜单部分*/
+.side{
+    width: 240px;
+    padding-right:15px;
+    padding-left:15px;
+    background-color:#ecedef;
+    margin:0px;
+}
+.side .panel-body{
+    background-color:#ecedef;
+    padding-top:10px;
+}
+.side .accordion{
+    background-color:#ecedef;
+}
+.side .accordion .accordion-header{
+    margin-left:0;
+    background-color:#ecedef;
+    height:34px;
+}
+.side .accordion .accordion-header-selected{
+    margin-left:0;
+    background:#0361b0;
+    background: -webkit-linear-gradient(#1d7fd3, #146fcb); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#1d7fd3, #146fcb); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#1d7fd3, #146fcb); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#1d7fd3, #146fcb); /* 标准的语法 */
+}
+.side .accordion .accordion-header-selected .panel-title{
+    color:#ffffff;
+}
+.side .panel-tool a:hover{
+    background-color:transparent;
+    background-image:url(images/space.gif);/*space.gif 是一个透明的图片文件*/
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src="images/accordion_arrows.png", enabled=true, sizingMethod=scale);
+}
+.side .accordion .accordion-header:hover{
+    background-color:#dddddd;
+    height:34px;
+}
+.side .panel-title{
+    height:20px;
+    line-height:20px;
+    color:#000000;
+    font-size:14px;
+    text-indent:20px;
+    font-weight:100;
+}
+/*fixed*/
+.side .panel-header .panel-body{
+    border:none;
+    background:none;
+}
+
+.side .tree-title{
+    color:#333333;
+    font-size:14px;
+}
+.side .tree-node-hover:hover .tree-title
+{
+    color: #0361b0;
+}
+.side .tree-node{
+    height:22px;
+}
+.side .tree-node-hover{
+    height:22px;
+}
+.side .tree-node-selected{
+    background:none;
+}
+.side .tree-node-hover{
+    background:none;
+}
+.side .accordion-collapse{
+    background:url('images/accordion_arrows.png') no-repeat 0 0!important;
+    background-image:url(images/space.gif);/*space.gif 是一个透明的图片文件*/
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src="images/accordion_arrows.png", enabled=true, sizingMethod=scale);
+}
+.side .accordion-expand{
+    background:url('images/accordion_arrows.png') no-repeat -16px 0px!important;
+    background-image:url(images/space.gif);/*space.gif 是一个透明的图片文件*/
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src="images/accordion_arrows.png", enabled=true, sizingMethod=scale);
+}
+.side .tabs li.tabs-selected a.tabs-inner{
+    border: none;
+}
+

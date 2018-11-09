@@ -71,7 +71,7 @@ public class DateUtil {
 //		//String时间转时间戳
 		DateStringtoLong("2018-05-17 00:00:00");
 //		//时间戳转String时间
-		DateLongToString(1515082500000L);
+		DateLongToString(new Date().getTime());
 		Date();
 		DateForCalendar();
 		

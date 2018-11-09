@@ -48,7 +48,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				type:'post',
 				dateType:"json",
 				success:function(data){
-					debugger;
 					var ss = data[0];
 					$('#divshow').html(ss.装备1);
 					console.log(ss);
