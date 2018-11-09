@@ -1,6 +1,6 @@
-package com.jdbc.test;
+package com.jdbc.demo.test;
 
-import com.jdbc.test.PlatformException;
+import com.jdbc.demo.test.PlatformException;
 
 public final class ID {
 

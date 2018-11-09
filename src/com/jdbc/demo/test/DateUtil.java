@@ -1,4 +1,4 @@
-package com.jdbc.test;
+package com.jdbc.demo.test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

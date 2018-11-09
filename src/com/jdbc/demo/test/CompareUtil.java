@@ -1,4 +1,4 @@
-package com.jdbc.test;
+package com.jdbc.demo.test;
 
 import java.text.Collator;
 import java.util.ArrayList;
