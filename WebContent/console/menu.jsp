@@ -28,8 +28,9 @@
             <div id="menuTabDiv" data-options="collapsed:false,collapsible:false">
                 <div class="menu_tab">
                     <div id="menuShow" class="menu_tab_selected">全部资源</div>
+                    <div id="menuTree" class="easyui-tree"></div>
                 </div>
-                <div id="tree" ></div>
+               
             </div>
         </div>
     </div>

@@ -350,9 +350,8 @@
 }
 /*左侧菜单部分*/
 .side{
-    width: 240px;
-    padding-right:15px;
-    padding-left:15px;
+    width: 220px;
+    padding:0px;
     background-color:#ecedef;
     margin:0px;
 }

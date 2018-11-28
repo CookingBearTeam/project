@@ -44,28 +44,30 @@ body {
 .menu_tab_selected {
     width: 100px;
     height: 30px;
-    float: left;
     background-color: #0361b0;
     line-height: 30px;
     color: #ffffff;
     border: #0361b0 solid 1px;
     border-radius: 5px;
+    padding-left:6px;
+    margin-left:15px;
+    text-align: center;
 }
 .menu_tab {
 	width: 150px;
     height: 100%;
-    margin: 10px auto;
-    font-size: 14px;
+    margin: 10px auto ;
+    font-size: 16px;
     text-align: center;
-    padding-left:50px;
 }
-
-
-
-
-
-
-/* .back  {
+#menuTree{
+	font-size: 18px;
+	margin: 10px auto ;
+	width: 100px;
+	text-align: left;
+	color: #013569;
+}
+.back  {
 	float: left;
 	padding-left: 22px;
 	margin-right: 20px;
@@ -302,6 +304,8 @@ body {
 }
 .clear {
     clear: both;
-} */
+} 
 
-
+.tree-node-selected{
+	margin:0px;
+}

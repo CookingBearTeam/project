@@ -3,7 +3,7 @@
 <mapper namespace="com.jdbc.console.dao.MenuDao">
 	
 	<select id="queryMenuBytreepath" parameterType="java.lang.String" resultType="com.jdbc.console.orm.MenuBean">
-		SELECT * FROM sys_menu WHERE isdelete='0' AND treepath=#{treepath};
+		SELECT * FROM sys_menu WHERE isdelete='0' AND treepath=#{treepath} ORDER BY sort;
 	</select>
 	
 	<select id="queryMenuById" parameterType="java.lang.String" resultType="com.jdbc.console.orm.MenuBean">
