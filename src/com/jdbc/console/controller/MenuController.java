@@ -41,6 +41,7 @@ public class MenuController {
 					Map<String, Object>map =new HashMap<>();
 					map.put("id", list.get(i).getId());
 		    		map.put("text", list.get(i).getTitle());
+		    		map.put("url", list.get(i).getUrl());
 		    		List<MenuBean> listChildren = menuService.queryMenuBytreepath(list.get(i).getId());
 		    		if(listChildren.size()>0){
 		    			map.put("state", "closed");

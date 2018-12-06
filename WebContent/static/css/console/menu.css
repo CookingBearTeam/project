@@ -140,23 +140,6 @@ body {
     background-position: 185px 10px;
     background-repeat: no-repeat;
 }
-.menu_item_selected {
-    height: 33px;
-    width: 100%;
-    border-top: #d8dbe0 solid 1px;
-    line-height: 33px;
-    font-size: 14px;
-    color: #ffffff;
-    text-indent: 20px;
-    background-image: url(../image/item_open.png);
-    background-position: 185px 10px;
-    background-repeat: no-repeat;
-    background: -webkit-linear-gradient(#1d7fd3, #146fcb); Safari 5.1 - 6.0
-    background: -o-linear-gradient(#1d7fd3, #146fcb); Opera 11.1 - 12.0
-    background: -moz-linear-gradient(#1d7fd3, #146fcb); Firefox 3.6 - 15
-    background: linear-gradient(#1d7fd3, #146fcb); 鏍囧噯鐨勮娉�
-    
-}
 .menu_item:link {
 }
 .menu_item:visited {
@@ -308,4 +291,26 @@ body {
 
 .tree-node-selected{
 	margin:0px;
+}
+.tabs_text_clear{
+	float:right;
+	width:16px;
+	height: 14px;
+	margin-left:2px;
+	margin-top:6px;
+	background-repeat: no-repeat;
+	vertical-align:middle;
+	background-image:url('../../image/tabs_clear.png');
+}
+.tabs_text_clear:hover {
+ 	background-image:url('../../image/tabs_clear_hover.png');
+} 
+.tabs_text{
+	display:inline-block;
+	height:100%;
+	font-size:14px;
+	float:left;
+	padding-top:3px;
+	padding-left:15px;
+	cursor:default;
 }

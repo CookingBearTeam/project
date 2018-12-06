@@ -37,15 +37,9 @@
 	
 	<div id="centerLayoutDiv" data-options="region:'center',border:false" style="overflow: hidden;" class="main">
         <div id="tabMainframe" class="tabs" data-options="fit:true,border:false"></div>
+       	<div id="mainframe" class="mainframe" data-options="fit:true,border:false" style="width:100%;height:99%;"></div>
     </div>
 	
-	<div id="tabsMenu" class="easyui-menu" style="width: 120px; display: none;">
-		<div name="close">关闭</div>
-		<div name="Other">关闭其他</div>
-		<div name="All">关闭所有</div>
-	</div>
-	<!-- 弹出窗口 -->
-	<div id="open_Dialog" style="overflow:hidden"></div>
 </body>
 
 </html>
