@@ -25,11 +25,11 @@
 	
 	<div id="westLayoutDiv" data-options="region:'west',split:false,border:false" class="side" style="border-right:#b1b2b2 solid 1px">
         <div id="rootMenuDiv" class="easyui-accordion" data-options="fit:true,border:false">
-            <div id="menuTabDiv" data-options="collapsed:false,collapsible:false">
+            <div id="menuTabDiv" data-options="collapsed:false,collapsible:false" style="border-bottom-style: none;">
                 <div class="menu_tab">
                     <div id="menuShow" class="menu_tab_selected">全部资源</div>
-                    <div id="menuTree" class="easyui-tree"></div>
                 </div>
+                <div id="menuTree" class="easyui-tree"></div>
                
             </div>
         </div>
