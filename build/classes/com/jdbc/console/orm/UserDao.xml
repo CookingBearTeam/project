@@ -6,5 +6,8 @@
 		SELECT * FROM sys_user WHERE username=#{username};
 	</select>
 	
+	<select id="queryUserList" parameterType="java.lang.String" resultType="com.jdbc.console.orm.UserBean">
+		SELECT * FROM sys_user;
+	</select>
 	
 </mapper>

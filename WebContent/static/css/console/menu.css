@@ -50,7 +50,7 @@ body {
     border: #0361b0 solid 1px;
     border-radius: 5px;
     padding-left:6px;
-    margin-left:15px;
+    margin-left:50px;
     text-align: center;
 }
 .menu_tab {
@@ -63,7 +63,7 @@ body {
 #menuTree{
 	font-size: 18px;
 	margin: 10px auto ;
-	width: 100px;
+	width: 150px;
 	text-align: left;
 	color: #013569;
 }
@@ -313,4 +313,7 @@ body {
 	padding-top:3px;
 	padding-left:15px;
 	cursor:default;
+}
+#tabMainframe{
+	background-color: #f3f3f3;
 }

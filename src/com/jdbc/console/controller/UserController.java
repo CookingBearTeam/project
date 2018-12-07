@@ -62,6 +62,13 @@ public class UserController {
 		}
 		return map;
 	}
+	
+	@RequestMapping(value = "/queryUserList",method = RequestMethod.POST)
+	public @ResponseBody List<UserBean> queryUserList() {
+		List<UserBean> userList = userService.queryUserList();
+		return userList;
+		
+	}
 }
 	
 

@@ -1208,7 +1208,7 @@
   overflow: hidden;
   position: relative;
 }
-.datagrid-view {
+.datagrid-view { 
   position: relative;
   overflow: hidden;
 }
@@ -2731,4 +2731,7 @@
 }
 .tooltip-bottom .tooltip-arrow {
   border-bottom-color: #ffffff;
+}
+.datagrid-htable{
+	height:70%;
 }

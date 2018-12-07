@@ -26,7 +26,7 @@ public class MenuController {
 	@RequestMapping(value = "/login",method = RequestMethod.POST) 
 	public @ResponseBody String userLogin() {
 		String tree = getTree("0");
-		System.out.println(tree);
+		//System.out.println(tree);
 		return tree;
 	}
 	

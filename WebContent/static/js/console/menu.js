@@ -20,7 +20,6 @@ $(document).ready(function(){
 			 	                	//添加主菜单的tab框
 			 	                	var tabsText = '<div id = "tab_div_'+id+'" class="tab_div" style="display:inline-block;"><div id="'+'tabs_text_'+ id + 
 			 	                    	'" class = "tabs_text">'+text+'</div><div id = "tabs_text_clear_'+ id +' "class="tabs_text_clear"></div></div>';
-			 	                	console.log(tabsText);
 			 	                	//收集tab栏下的所有div id
 			 	                	var tabs = document.getElementById("tabMainframe").childNodes;
 				 	 				var tabIds = new Array();
