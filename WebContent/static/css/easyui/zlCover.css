@@ -1,0 +1,42 @@
+
+/*http://wl.zsikeji.com/wl/console/views/index/index.jsp text001 123456*/
+
+/*
+	**ui.css
+*/
+.easyui-linkbutton{margin-top:1px;}
+#menuTabDiv .menu_tab{width:200px;height:30px;margin:20px auto;font-size:1em;}
+#menuTabDiv ,#menuTabDiv .menu_tab_no{width:100px;line-height:28px;}
+
+.side .panel-title{font-size:1em;line-height:23px;}
+.side .tree-node,.side .tree-node-hover{height:30px;padding-left:20px;}
+.side .tree-node-hover .panel-title{font-weight:bold;}
+.l-btn-text{padding:0 10px;font-size:14px;}
+.datagrid td{padding:7px;}
+.datagrid .easyui-linkbutton{padding:1px 16px;display: inline-block;}
+.content_title{font-size:13px;}
+
+/*
+	** easyui.css
+*/
+.panel-body{font-size:14px;}
+.panel-title{padding-left:10px;height:20px;font-size:1em;line-height:20px;font-weight:normal;}
+.textbox .textbox-text{font-size:14px;}
+.tabs-title{font-size:15px;}
+.datagrid-cell{font-size:13px;}
+.datagrid-header .datagrid-cell span{font-size: 13px;}
+.l-btn-left{}
+
+/*
+** bootstrap.css
+*/
+.container-fluid{padding:10px 40px 0;}
+
+.container-fluid .row{/*height:30px;*/line-height:30px;}
+.container-fluid .row .textbox-text{line-height:15px;}
+.container-fluid .row .col-xs-2,.container-fluid .row .col-xs-1,.container-fluid .row .col-xs-3{padding-left:1;padding-right:10px;}
+#addOrg .l-btn-small{margin:10px;margin-left:100px;}
+#addOrg .datagrid-toolbar .l-btn-small{margin-left:10px;}
+#addOrg .datagrid-toolbar .l-btn-text{padding:0px}
+#userRegister .l-btn-small{margin:10px;}
+
