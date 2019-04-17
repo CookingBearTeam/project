@@ -24,7 +24,7 @@ public class BigdecimalUtil {
 	    System.out.println("a plus b is : " + a);
 	}
 	
-	//惩罚.除法
+	//乘法.除法
 	private void divide(){
 		BigDecimal a = new BigDecimal(1).divide(new BigDecimal(3),4,BigDecimal.ROUND_HALF_UP);
 		System.out.println("a = " + a);
@@ -39,19 +39,22 @@ public class BigdecimalUtil {
 //		String ss = df.format(dd);
 //		System.out.println(ss);
 //	}
-//	
+	
 	
 	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
-		BigdecimalUtil bigdecimal = new BigdecimalUtil();
-		bigdecimal.add();
-		bigdecimal.divide();
+//		/*BigdecimalUtil bigdecimal = new BigdecimalUtil();
+//		bigdecimal.add();
+//		bigdecimal.divide();*/
 		
 
-		
-		
-
-		
+		BigDecimal weight = new BigDecimal("200");
+		BigDecimal grossWeight = new BigDecimal("300");
+		BigDecimal unload = grossWeight.subtract(weight);
+		int i = unload.compareTo(new BigDecimal("0"));
+		if (i < 0) {
+			unload = new BigDecimal("0");
+		}
 		
 		
 	}
