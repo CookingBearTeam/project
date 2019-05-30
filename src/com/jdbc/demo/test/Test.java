@@ -1,5 +1,10 @@
 package com.jdbc.demo.test;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Vector;
 
 public class Test {
@@ -24,10 +29,29 @@ public class Test {
 //		double dd = (double) ll;
 //		System.out.println(dd);
 
-		Vector vector = new Vector();
-		vector.add(0,"swdsad");
-		vector.add("swdsad(1)");
-		System.out.println(vector);
+//		Vector vector = new Vector();
+//		vector.add(0,"swdsad");
+//		vector.add("swdsad(1)");
+//		System.out.println(vector);
+		
+		
+//		Map<String,String> orgMap = new HashMap<String, String>();
+//		orgMap.put("1", "aaa");
+//		orgMap.put("2", "bbb");
+//		orgMap.put("3", "ccc");
+//		orgMap.put("4", "ddd");
+//		orgMap.put("5", "eee");
+//		System.out.println(orgMap.get("1"));
+//		System.out.println(orgMap.get("7"));
+		
+		String displayName = "配额导入模版.xls";
+		try {
+			String displayName1 = URLEncoder.encode(displayName, "UTF-8");
+			System.out.println(displayName1);
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 	}
